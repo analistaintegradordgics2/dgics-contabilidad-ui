@@ -58,6 +58,7 @@
 <script>
 import Swal from "sweetalert2/src/sweetalert2.js";
 export default {
+  name: "LNewmodal",
   props: {
     titulo: {
       type: String,
