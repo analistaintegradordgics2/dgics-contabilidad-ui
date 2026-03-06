@@ -1,35 +1,39 @@
-import http from './src/mixins/http'
-import mensajes from './src/mixins/mensajes'
+import LInput from './components/input.vue'
+import LInputDecimal from './components/inputdecimal.vue'
+import LMoney from './components/money.vue'
+import LNewModal from './components/newmodal.vue'
+import LSelect from './components/select.vue'
+import LSelectApi from './components/selectApi.vue'
+import LSelectRest from './components/selectRest.vue'
+import LTable from './components/table.vue'
+import LTipoDocumento from './components/tipoDocumento.vue'
+import LInmueblesAsociados from './components/inmueblesasociados.vue'
 
-import Input from './src/components/input.vue'
-import InputDecimal from './src/components/inputdecimal.vue'
-import Money from './src/components/money.vue'
-import NewModal from './src/components/newmodal.vue'
-import Select from './src/components/select.vue'
-import SelectApi from './src/components/selectApi.vue'
-import SelectRest from './src/components/selectRest.vue'
-import Table from './src/components/table.vue'
-import TipoDocumento from './src/components/tipoDocumento.vue'
-import InmueblesAsociados from './src/components/inmueblesasociados.vue'
+import http from './mixins/http'
+import mensajes from './mixins/mensajes'
 
-const install = (Vue) => {
+const components = [
+  LInput,
+  LInputDecimal,
+  LMoney,
+  LNewModal,
+  LSelect,
+  LSelectApi,
+  LSelectRest,
+  LTable,
+  LTipoDocumento,
+  LInmueblesAsociados
+]
 
-  // registrar componentes globales
-  Vue.component('l-input', Input)
-  Vue.component('l-inputdecimal', InputDecimal)
-  Vue.component('l-money', Money)
-  Vue.component('l-modal', NewModal)
-  Vue.component('l-select', Select)
-  Vue.component('l-select-api', SelectApi)
-  Vue.component('l-select-rest', SelectRest)
-  Vue.component('l-table', Table)
-  Vue.component('l-tipo-documento', TipoDocumento)
-  Vue.component('l-inmuebles-asociados', InmueblesAsociados)
+export default {
+  install(Vue) {
 
-  // registrar mixins globales
-  Vue.mixin(http)
-  Vue.mixin(mensajes)
+    components.forEach(component => {
+      Vue.component(component.name, component)
+    })
 
+    Vue.mixin(http)
+    Vue.mixin(mensajes)
+
+  }
 }
-
-export default { install }
