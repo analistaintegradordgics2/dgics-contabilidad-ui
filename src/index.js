@@ -3,7 +3,7 @@ import mensajes from './mixins/mensajes'
 
 const requireComponent = require.context(
   './components/l', 
-  false,
+  true,
   /\.vue$/
 )
 
