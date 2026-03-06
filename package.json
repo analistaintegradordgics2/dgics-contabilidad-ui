@@ -1,0 +1,19 @@
+{
+  "name": "dgics-contabilidad-ui",
+  "version": "1.0.0",
+  "description": "Componentes UI de Contabilidad para DGiCS",
+  "main": "src/index.js",
+  "author": "Leidy Jimena Bautista",
+  "license": "MIT",
+
+  "dependencies": {
+    "axios": "^0.27.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  },
+
+  "peerDependencies": {
+    "vue": "^2.6.0",
+    "quasar": "^1.0.0"
+  }
+}
