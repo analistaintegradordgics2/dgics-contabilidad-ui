@@ -1,16 +1,16 @@
-import http from './mixins/http'
-import mensajes from './mixins/mensajes'
+import http from './src/mixins/http'
+import mensajes from './src/mixins/mensajes'
 
-import Input from './components/input.vue'
-import InputDecimal from './components/inputdecimal.vue'
-import Money from './components/money.vue'
-import NewModal from './components/newmodal.vue'
-import Select from './components/select.vue'
-import SelectApi from './components/selectApi.vue'
-import SelectRest from './components/selectRest.vue'
-import Table from './components/table.vue'
-import TipoDocumento from './components/tipoDocumento.vue'
-import InmueblesAsociados from './components/inmueblesasociados.vue'
+import Input from './src/components/input.vue'
+import InputDecimal from './src/components/inputdecimal.vue'
+import Money from './src/components/money.vue'
+import NewModal from './src/components/newmodal.vue'
+import Select from './src/components/select.vue'
+import SelectApi from './src/components/selectApi.vue'
+import SelectRest from './src/components/selectRest.vue'
+import Table from './src/components/table.vue'
+import TipoDocumento from './src/components/tipoDocumento.vue'
+import InmueblesAsociados from './src/components/inmueblesasociados.vue'
 
 const install = (Vue) => {
 
