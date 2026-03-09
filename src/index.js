@@ -1,24 +1,20 @@
+import Input from './components/l/input.vue'
+import InputDecimal from './components/l/inputdecimal.vue'
+import Select from './components/l/select.vue'
+import Table from './components/l/table.vue'
+import TipoDocumento from './components/l/tipoDocumento.vue'
+
 import http from './mixins/http'
 import mensajes from './mixins/mensajes'
-
-const requireComponent = require.context(
-  './components/l', 
-  true,
-  /\.vue$/
-)
 
 export default {
   install(Vue) {
 
-    requireComponent.keys().forEach(fileName => {
-
-      const componentConfig = requireComponent(fileName)
-
-      const component = componentConfig.default || componentConfig
-
-      Vue.component(component.name, component)
-
-    })
+    Vue.component(Input.name, Input)
+    Vue.component(InputDecimal.name, InputDecimal)
+    Vue.component(Select.name, Select)
+    Vue.component(Table.name, Table)
+    Vue.component(TipoDocumento.name, TipoDocumento)
 
     Vue.mixin(http)
     Vue.mixin(mensajes)
