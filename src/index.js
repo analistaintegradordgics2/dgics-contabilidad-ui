@@ -1,8 +1,7 @@
 import Input from './components/l/input.vue'
 import InputDecimal from './components/l/inputdecimal.vue'
-import Select from './components/l/select.vue'
 import Table from './components/l/table.vue'
-import TipoDocumento from './components/l/tipoDocumento.vue'
+import TipoDocumento from './componets/l/tipoDocumento.vue'
 
 import http from './mixins/http'
 import mensajes from './mixins/mensajes'
@@ -12,7 +11,6 @@ export default {
 
     Vue.component(Input.name, Input)
     Vue.component(InputDecimal.name, InputDecimal)
-    Vue.component(Select.name, Select)
     Vue.component(Table.name, Table)
     Vue.component(TipoDocumento.name, TipoDocumento)
 
