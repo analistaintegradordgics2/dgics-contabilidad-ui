@@ -1,7 +1,7 @@
 import Input from './components/l/input.vue'
 import InputDecimal from './components/l/inputdecimal.vue'
 import Table from './components/l/table.vue'
-import TipoDocumento from './componets/l/tipoDocumento.vue'
+import TipoDocumento from './components/l/tipoDocumento.vue'
 
 import http from './mixins/http'
 import mensajes from './mixins/mensajes'
