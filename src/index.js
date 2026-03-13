@@ -1,21 +1,31 @@
-import Input from './components/l/input.vue'
-import InputDecimal from './components/l/inputdecimal.vue'
-import Table from './components/l/table.vue'
-import TipoDocumento from './components/l/tipoDocumento.vue'
-
 import http from './mixins/http'
 import mensajes from './mixins/mensajes'
 
-export default {
+const requireComponent = require.context(
+  './components/l',
+  true,
+  /\.vue$/
+)
+
+const ContabilidadUI = {
   install(Vue) {
 
-    Vue.component(Input.name, Input)
-    Vue.component(InputDecimal.name, InputDecimal)
-    Vue.component(Table.name, Table)
-    Vue.component(TipoDocumento.name, TipoDocumento)
+    requireComponent.keys().forEach(fileName => {
+
+      const componentConfig = requireComponent(fileName)
+
+      const component = componentConfig.default || componentConfig
+
+      if (component.name) {
+        Vue.component(component.name, component)
+      }
+
+    })
 
     Vue.mixin(http)
     Vue.mixin(mensajes)
 
   }
 }
+
+export default ContabilidadUI

@@ -1,0 +1,30 @@
+<template>
+  <span v-if="can">
+    <slot/>
+  </span>
+</template>
+
+<script>
+// import { Cookies } from 'quasar'
+
+export default {
+  name: 'can',
+  props: ['permiso'],
+  computed: {
+    can () {
+      if (this.permiso === '') {
+        return true
+      } else {
+        const permisosStorage = JSON.parse(localStorage.getItem('permisos'))
+        const superuser = this._.get(JSON.parse(localStorage.getItem('user')), 'is_superuser', false)
+        const permiso = permisosStorage.includes(this.permiso)
+        return superuser || permiso
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
