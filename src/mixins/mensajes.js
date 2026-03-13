@@ -1,5 +1,5 @@
 import { Dialog } from 'quasar'
-import Swal from 'sweetalert2/src/sweetalert2.js'
+// import Swal from 'sweetalert2/src/sweetalert2.js'
 
 const TEXTCOLOR = "#194880";
 
