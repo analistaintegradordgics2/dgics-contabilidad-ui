@@ -6,6 +6,7 @@
 
 <script>
 // import { Cookies } from 'quasar'
+import _ from 'lodash'
 
 export default {
   name: 'can',
