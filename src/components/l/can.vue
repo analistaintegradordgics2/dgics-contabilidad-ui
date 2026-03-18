@@ -17,7 +17,7 @@ export default {
         return true
       } else {
         const permisosStorage = JSON.parse(localStorage.getItem('permisos'))
-        const superuser = this._.get(JSON.parse(localStorage.getItem('user')), 'is_superuser', false)
+        const superuser = _.get(JSON.parse(localStorage.getItem('user')), 'is_superuser', false)
         const permiso = permisosStorage.includes(this.permiso)
         return superuser || permiso
       }
